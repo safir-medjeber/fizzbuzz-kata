@@ -1,10 +1,8 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class FizzBuzzTest {
@@ -74,9 +72,8 @@ public class FizzBuzzTest {
    public void given_sequence_of_number_should_return_fizzbuzz_string() {
       List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
 
-      String actual = fizzBuzz.compute(list);
+      StringBuilder actual = fizzBuzz.compute(list);
 
-      String expected = "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz";
-      assertEquals(actual, expected);
+      assertEquals(actual.toString(), "12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz");
    }
 }
